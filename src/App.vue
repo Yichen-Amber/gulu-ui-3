@@ -3,7 +3,6 @@
 </template>
 
 <script>
-import Amber from './components/Amber.vue'
 
 export default {
   name: 'App',
