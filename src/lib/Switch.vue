@@ -1,4 +1,4 @@
-<template>
+ <template>
   <button @click="toggle" :class="{checked:value}"> 
       <span></span> 
   </button>
