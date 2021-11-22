@@ -16,7 +16,6 @@ export default {
   } 
 }
 </script>
-</script>
 <style lang="scss" scoped>
   $h: 22px;
   $h2: $h - 4px;
