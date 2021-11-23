@@ -1,10 +1,7 @@
 <template>
-<div>
-    <button class="gulu-button"
-    :class="{[`theme-${theme}`]: theme}">
+    <button class="gulu-button":class="{[`gulu-theme-${theme}`]: theme}">
       <slot />
     </button>
-  </div>
 </template>
 <script lang="ts">
 export default {
@@ -16,7 +13,7 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 div {
 $h: 32px;
 $border-color: #d9d9d9;
@@ -51,5 +48,6 @@ $radius: 4px;
   &::-moz-focus-inner {
     border: 0;
   }
+}
 }
 </style> 
