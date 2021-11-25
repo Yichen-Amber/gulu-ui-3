@@ -1,5 +1,5 @@
 <template>
-    <button class="gulu-button":class="classes" :disabled="disabled">
+  <button class="gulu-button" :class="classes" :disabled="disabled">
      <span v-if="loading" class="gulu-loadingIndicator"></span>
       <slot />
     </button>
