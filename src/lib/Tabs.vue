@@ -4,7 +4,7 @@
     <div class="gulu-tabs-nav-item" v-for="(t,index) in titles" @click="select(t)" :class="{selected: t=== selected}"  :key="index">{{t}}</div>
   </div>
   <div class="gulu-tabs-content">
-          {{current}}
+ <component class="gulu-tabs-content-item" :class="{selected: c.props.title === selected }" v-for="c in defaults" :is="c" />
     <component class="gulu-tabs-content-item" :is="current" />
     <component class="gulu-tabs-content-item" v-for="(c,index) in defaults" :is="c" :key="index" />
   </div>
@@ -72,6 +72,12 @@ $border-color: #d9d9d9;
   }
   &-content {
     padding: 8px 0;
+        &-item {
+      display: none;
+      &.selected {
+        display: block;
+      }
+    }
   }
 }
 </style>
