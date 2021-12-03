@@ -1,27 +1,27 @@
 <template>
 <div class="layout">
-    <Topnav class="nav" />
-        <div class="content">
-            <aside v-if="menuVisible">
-                <h2>组件列表</h2>
-                <ol>
-                    <li>
-                        <router-link to="/doc/switch" >Switch组件</router-link>
-                    </li>
-                                        <li>
-                        <router-link to="/doc/button" >Buttom组件</router-link>
-                    </li>
-                                        <li>
-                        <router-link to="/doc/dialog" >Dialog组件</router-link>
-                    </li>
-                                        <li>
-                        <router-link to="/doc/tabs" >Tabs组件</router-link>
-                    </li>
-                </ol>
-            </aside>
-            <main>
-              <router-view/>
-            </main>
+  <Topnav toggleMenuButtonVisible class="nav" />
+  <div class="content">
+    <aside v-if="menuVisible">
+      <h2>组件列表</h2>
+      <ol>
+        <li>
+          <router-link to="/doc/switch">Switch 组件</router-link>
+        </li>
+        <li>
+          <router-link to="/doc/button">Button 组件</router-link>
+        </li>
+        <li>
+          <router-link to="/doc/dialog">Dialog 组件</router-link>
+        </li>
+        <li>
+          <router-link to="/doc/tabs">Tabs 组件</router-link>
+        </li>
+      </ol>
+    </aside>
+    <main>
+      <router-view />
+    </main>
         </div>
     </div>
 </template>
