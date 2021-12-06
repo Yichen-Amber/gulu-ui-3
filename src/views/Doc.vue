@@ -57,6 +57,9 @@ export default {
     flex-shrink: 0;
   }
   > .content {
+    .router-link-active {
+    text-decoration: underline;
+}
     flex-grow: 1;
     padding-top: 60px;
     padding-left: 156px;
