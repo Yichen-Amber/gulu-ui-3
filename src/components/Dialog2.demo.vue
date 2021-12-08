@@ -1,28 +1,26 @@
+<demo>
+一键打开 Dialog
+</demo>
 <template>
-<div>Dialog 示例</div>
-<Demo :component="Dialog1Demo" />
-<Demo :component="Dialog2Demo" />
+<div>
+  <Button @click="showDialog">打开对话框</Button>
+</div>
 </template>
 
 <script lang="ts">
-import Dialog from '../lib/Dialog.vue'
 import Button from '../lib/Button.vue'
-import {ref,h} from 'vue'
-import {openDialog} from '../lib/openDialog'
+import {
+  ref,
+  h
+} from 'vue'
+import {
+  openDialog
+} from '../lib/openDialog'
 export default {
   components: {
-    Dialog,
     Button
-      },
+  },
   setup() {
-    const x = ref(false)
-    const toggle = () => {
-      x.value = !x.value
-    }
-    const f1 = () => {
-      return false
-    }
-    const f2 = () => {}
     const showDialog = () => {
       openDialog({
         title: h('strong', {}, '标题'),
@@ -36,10 +34,6 @@ export default {
       })
     }
     return {
-      x,
-      toggle,
-      f1,
-      f2,
       showDialog
     }
   }
