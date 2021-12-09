@@ -1,14 +1,14 @@
+import { marked } from 'marked';
 // @ts-nocheck
 import path from 'path'
 import fs from 'fs'
-import { marked } from 'marked'
 
-const mdToJs = str => {
+const mdToJs = str => {/*  */
     const content = JSON.stringify(marked(str))
     return `export default ${content}`
 }
 
-export function md() {
+export function md() {/*  */
     return {
         configureServer: [ // 用于开发
             async ({ app }) => {
